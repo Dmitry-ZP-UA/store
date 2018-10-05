@@ -13,10 +13,10 @@
 
 Route::namespace('Front')->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/category/{id}', 'CategoryController@index')->name('category');
+    Route::get('/product/{id}', 'ProductController@index')->name('product');
 });
 
-Route::namespace('Front')->group(function () {
-    Route::get('/', 'HomeController@index')->name('home');
-});
+
 
 

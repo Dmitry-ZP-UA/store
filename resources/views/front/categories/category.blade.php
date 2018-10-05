@@ -20,7 +20,7 @@
         </div>
         <hr>
         <div class="col-md-3">
-            @include('front.categories.sidebar-category')
+            {{--@include('front.categories.sidebar-category')--}}
         </div>
         <div class="col-md-9">
             <div class="row">
@@ -34,7 +34,7 @@
             </div>
             <hr>
             <div class="row">
-                @include('front.products.product-list', ['products' => $products])
+                {{--@include('front.products.product-list', ['products' => $products])--}}
             </div>
         </div>
     </div>
