@@ -9,14 +9,14 @@ class ProductController extends Controller
     /**
      * @var ProductRepositoryInterface
      */
-    private $product;
+    private $repository;
     /**
      * ProductController constructor.
      * @param ProductRepositoryInterface $repository
      */
-    public function __construct(ProductRepositoryInterface $product)
+    public function __construct(ProductRepositoryInterface $repository)
     {
-        $this->product = $product;
+        $this->repository = $repository;
     }
     /**
      * @param $id
@@ -24,7 +24,7 @@ class ProductController extends Controller
      */
     public function index($id)
     {
-        $product = $this->product->findOneOrFail($id);
+        $product = $this->repository->findOneOrFail($id);
         return view('front.products.product', compact('product'));
     }
 }

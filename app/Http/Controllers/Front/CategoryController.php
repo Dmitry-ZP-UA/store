@@ -15,18 +15,18 @@ use App\Repositories\CategoryRepository;
 
 class CategoryController extends Controller
 {
-    protected $category;
+    protected $repository;
 
-    public function __construct(CategoryRepositoryInterface $category)
+    public function __construct(CategoryRepositoryInterface $repository)
     {
-        $this->category = $category;
+        $this->repository = $repository;
 
     }
 
     public function index($id)
     {
-        $category = $this->category->findOneOrFail($id);
-        $categories = $this->category->all();
+        $category = $this->repository->findOneOrFail($id);
+        $categories = $this->repository->all();
 
         return view('front.categories.category', compact('category', 'categories'));
     }
