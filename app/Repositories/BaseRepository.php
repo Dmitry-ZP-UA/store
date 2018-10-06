@@ -10,7 +10,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 use Symfony\Component\Console\Input\Input;
 
-class BaseRepository implements BaseRepositoryInterface
+abstract class BaseRepository implements BaseRepositoryInterface
 {
     protected $model;
 
