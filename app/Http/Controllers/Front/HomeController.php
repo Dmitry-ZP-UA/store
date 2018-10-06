@@ -12,8 +12,8 @@ class HomeController extends Controller
      */
     public function index() {
 
-//        $cat1 = $this->categoryRepo->findCategoryById(0);
-//        $cat2 = $this->categoryRepo->findCategoryById(1);
+        /*$cat1 = $this->categoryRepo->findCategoryById(0);
+        $cat2 = $this->categoryRepo->findCategoryById(1);*/
 
         $cat1 = [
             'id'            => 0,
